@@ -167,7 +167,7 @@ const handleClick = () => {
   formData.append('f_img4', photo4);
 
   axios
-    .post('http://localhost:5000/api/projects', formData)
+    .post('https://events-backend.vercel.app/api/projects', formData)
     .then((res) => {
       console.log(res.data);
     })
