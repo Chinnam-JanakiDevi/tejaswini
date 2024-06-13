@@ -9,7 +9,7 @@ const Prgtheme = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5000/api/projects')
+      .get('https://events-backend.vercel.app/api/projects')
       .then((res) => {
         console.log(res.data);
         setData(res.data.data);
