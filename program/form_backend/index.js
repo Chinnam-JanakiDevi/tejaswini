@@ -46,7 +46,9 @@ mongoose.connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true })
 mongoose.connection.on('error', (err) => {
     console.error('DB connection error:', err);
 });
-
+app.get('/',async(req,res)=>{
+    res.send("hello")
+})
 // API routes
 app.post('/api/projects', upload.fields([
     { name: 'f_img', maxCount: 1 },
